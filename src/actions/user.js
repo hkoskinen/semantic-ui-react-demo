@@ -1,7 +1,8 @@
-
-export const USER_LOG_IN_REQUEST = 'USER_LOG_IN_REQUEST';
-export const USER_LOG_IN_FAILED = 'USER_LOG_IN_FAILED';
-export const USER_LOG_IN_SUCCESS = 'USER_LOG_IN_SUCCESS';
+import {
+  USER_LOG_IN_REQUEST,
+  USER_LOG_IN_FAILED,
+  USER_LOG_IN_SUCCESS
+} from './actionTypes';
 
 const userLoginRequest = () => {
   return {
