@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
-
+import { Provider } from 'react-redux';
+import store from './store/store';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import PageHeader  from './components/PageHeader';
@@ -17,16 +18,18 @@ const NotFound = () => (
 );
 
 ReactDOM.render(
-  <Router>
-    <div>
-      <PageHeader />
-      <Switch>
-        <Route path='/' component={HomePage} exact />
-        <Route path='/register' component={RegisterPage} exact />
-        <Route path='/login' component={LoginPage} exact />
-        <Route component={NotFound} />
-      </Switch>
-    </div>
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <div>
+        <PageHeader />
+        <Switch>
+          <Route path='/' component={HomePage} exact />
+          <Route path='/register' component={RegisterPage} exact />
+          <Route path='/login' component={LoginPage} exact />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
