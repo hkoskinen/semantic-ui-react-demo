@@ -1,6 +1,7 @@
 
 import { combineReducers } from 'redux';
 
+
 // user
 const initialUserState = {
 
@@ -14,18 +15,32 @@ const user = (state = initialUserState, action) => {
   }
 };
 
+
 // notebooks
-const initialNotebookState = {
+const initialNotebooksState = {
 
 };
-const notebooks = (state = initialNotebookState, action) => {
+const notebooks = (state = initialNotebooksState, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
+
+// notes
+const initialNotesState = {
+
+};
+const notes = (state = initialNotesState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+
 // root
-const rootReducer = combineReducers({ user, notebooks });
+const rootReducer = combineReducers({ user, notebooks, notes });
 
 export default rootReducer;
