@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 
 const HomePage = () => (
   <div>
@@ -9,4 +10,9 @@ const HomePage = () => (
   </div>
 );
 
-export default HomePage;
+const mapStateToProps = state => {
+  console.log(state);
+  return {};
+};
+
+export default connect(mapStateToProps)(HomePage);
