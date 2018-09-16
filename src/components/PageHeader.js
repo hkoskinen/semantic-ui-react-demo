@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, Container } from 'semantic-ui-react';
 
 const PageHeader = () => (
   <div>
-    <h1>appnamegoeshere</h1>
-    <nav>
-      <Link to='/'>home</Link>
-      <Link to='/register'>register</Link>
-      <Link to='/login'>login</Link>
-    </nav>
+    <Menu fixed='top' inverted>
+      <Menu.Item as={Link} to='/'>home</Menu.Item>
+      <Menu.Item as={Link} to='/register'>register</Menu.Item>
+      <Menu.Item as={Link} to='/login'>login</Menu.Item>
+    </Menu>
   </div>
 );
 
